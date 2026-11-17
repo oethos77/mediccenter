@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  /* Core Palette: Azul Oceano (#0EA5E9) & Verde Esmeralda (#10B981) */
+  --primary: 199 89% 48%;
+  --primary-strong: 200 94% 34%;
+  --primary-soft: 199 89% 95%;
+  --accent: 160 84% 39%;
+  --accent-strong: 161 90% 27%;
+  --accent-soft: 158 76% 94%;
+
+  /* Neutral & Architectural Surfaces */
+  --bg-canvas: 204 50% 98%;
+  --bg-surface: 0 0% 100%;
+  --bg-surface-ocean: 199 78% 96%;
+  --bg-deep: 202 68% 11%;
+  --bg-deep-elevated: 202 58% 15%;
+
+  /* Typography & Borders */
+  --text-primary: 203 48% 12%;
+  --text-secondary: 203 22% 38%;
+  --text-muted: 203 16% 48%;
+  --text-on-deep: 204 45% 97%;
+  --text-muted-deep: 202 25% 74%;
+  --border-hairline: 202 30% 88%;
+  --border-deep: 202 40% 22%;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+    background-color: hsl(var(--bg-canvas));
+    color: hsl(var(--text-primary));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Medic Center – Clínica Odontológica",
+  "description": "Clínica odontológica em Itacarambi especializada em clareamento dental, ortodontia invisível e implantes dentários.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
